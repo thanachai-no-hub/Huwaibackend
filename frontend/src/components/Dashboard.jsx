@@ -1,7 +1,8 @@
 import { useState, useMemo } from 'react'
 import './Dashboard.css'
 import { users } from '../data/mockData'
-
+import logo from "./asset/TrustSynnex.png";
+ 
 const Dashboard = () => {
   const [selectedUser, setSelectedUser] = useState(users[0])
   const [activeTab, setActiveTab] = useState(0)
@@ -65,10 +66,12 @@ const Dashboard = () => {
       <header className="hospital-header">
         <div className="container">
           <div className="header-content">
-            <div className="hospital-icon">🏥</div>
             <div>
-              <h1>Hawui Health Center</h1>
+              <h1>Synnex Evecare+</h1>
               <p>ระบบติดตามสุขภาพและกิจกรรมประจำวัน</p>
+            </div>
+            <div className="hospital-icon" style={{marginLeft: 'auto'}}>
+              <img src={logo} alt="Logo" style={{height: '80px', width: 'auto'}} />
             </div>
           </div>
         </div>
